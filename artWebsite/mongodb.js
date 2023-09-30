@@ -1,34 +1,38 @@
-const mongoose=require("mongoose")
+// Import the Mongoose library
+const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/ArtWebsite")
-.then(()=>{
-    console.log('mongoose connected');
-})
-.catch((e)=>{
-    console.log('failed',e);
-})
+// Connect to the MongoDB database using the specified URL
+mongoose
+  .connect("mongodb://127.0.0.1:27017/ArtWebsite")
+  .then(() => {
+    console.log('Mongoose connected successfully');
+  })
+  .catch((error) => {
+    console.error('Failed to connect to MongoDB:', error);
+  });
 
-const logInSchema=new mongoose.Schema({
-    name:{
-        type:String,
-        required:true
+// Define the schema for your collection
+const logInSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true // 'name' is a required field
     },
-
     email: {
-        type:String,
-        required: true
+        type: String,
+        required: true // 'email' is a required field
     },
-    password:{
-        type:String,
-        required:true
+    password: {
+        type: String,
+        required: true // 'password' is a required field
     },
     confirmPassword: {
-        type:String,
-        required: true
+        type: String,
+        required: true // 'confirmPassword' is a required field
     }
-})
+});
 
-const LogInCollection=new mongoose.model('LogInCollection',logInSchema)
+// Create a Mongoose model based on the schema, and specify the collection name
+const LogInCollection = mongoose.model('LogInCollection', logInSchema);
 
-module.exports=LogInCollection
-
+// Export the Mongoose model so that it can be used in other parts of your application
+module.exports = LogInCollection;
