@@ -1,0 +1,163 @@
+<%- include("partials/navbar.ejs") %>
+
+<%- include("partials/swiper.ejs") %>
+
+ <!---MainContent-->
+ <section class="main-content">
+    <div class="title">
+        <h1 class="title-state">
+            Discover the Captivating World of Art Pictures!
+        </h1>
+        <h3 class="subheading">
+            Step into a world of creativity and imagination with our stunning art picture collection. Each piece is a masterpiece, carefully crafted to evoke emotions and spark inspiration.
+
+            From breathtaking landscapes to mesmerizing abstracts, our art pictures will transport you to new realms of beauty and wonder. Every brushstroke and color choice is a testament to the artist's skill and passion.
+        </h3>
+        
+        <div class="img-main">
+            <img src="images/art-title-image.png">
+        </div>
+    </div>
+</section>
+
+
+
+<!--Service-->
+<div id="service" class="service-container">
+  <div class="service-wrapper">
+    <div class="img-service logo1">
+      <img src="images/service-logo.jpg">
+      
+    </div>
+    <div class="img-service logo2">
+      <img src="images/service-logo.jpg">
+      
+    </div>
+    <div class="img-service logo3">
+      <img src="images/service-logo.jpg">
+      
+    </div>
+    <div class="service-content1">
+      <div class="service-title">
+        <h2>30 day returns</h4>
+        <p>if you want to change to another art</p>
+      </div>
+    </div>
+    <div class="service-content2">
+        <div class="service-title">
+          <h2>Delivery in 48/72 hours</h4>
+          <p>To countries in Europe. Shipping within 10 business days to all other countries</p>
+        </div>
+    </div>
+    <div class="service-content3">
+      <div class="service-title">
+        
+        <h2>Assistence over the phone or via chat</h4>
+        <p>From Monday through Thursday from 9am to 2pm and from 3:30pm to 6pm. Friday from 9am to 2pm, CET Phone: (+34) 941 40 33 71</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- location -->
+
+</div>
+<div class = "contact-body">
+  <div class="contact-title">
+    <h1 id="contact-us">Contact Us</h1>
+  </div>
+  <div class = "contact-info">
+
+    <div class="form1">
+      <div>
+        <span><i class = "fas fa-mobile-alt"></i></span>
+        <span>Phone No.</span>
+        <span class = "text">020 7637 4500</span>
+      </div>
+      <div>
+        <span><i class = "fas fa-envelope-open"></i></span>
+        <span>G-mail</span>
+        <span class = "text">sherovulugbek04@gmail.com</span>
+      </div>
+      <div>
+        <span><i class = "fas fa-map-marker-alt"></i></span>
+        <span>Address</span>
+        <span class = "text">2Devon House, 58 St Katharine's Way, London E1W 1LP</span>
+      </div>
+      <div>
+        <span><i class = "fas fa-clock"></i></span>
+        <span>Opening Hours</span>
+        <span class = "text">Monday - Friday (9:00 AM to 5:00 PM)</span>
+      </div>
+    </div>
+
+    <div class = "contact-form">
+      <form>
+        <div>
+          <input type = "text" class = "form-control" placeholder="First Name">
+          <input type = "text" class = "form-control" placeholder="Last Name">
+        </div>
+        <div>
+          <input type = "email" class = "form-control" placeholder="E-mail">
+          <input type = "text" class = "form-control" placeholder="Phone">
+        </div>
+        <textarea rows = "5" placeholder="Message" class = "form-control"></textarea>
+        <input type = "submit" class = "send-btn" value = "send message">
+      </form>
+    </div>
+
+    <div class="location">
+      <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.388188002675!2d-0.07347638423009464!3d51.50609387963497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b36a2b9a07b%3A0x3efe4242dfd7849a!2sNortheastern%20University%20London!5e0!3m2!1sen!2suk!4v1690402729896!5m2!1sen!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<%- include("partials/footer.ejs") %>
+
+  <script>
+
+ const toggleBtn = document.querySelector('.toggle-btn')
+const toggleBtnIcon = document.querySelector('.toggle-btn i')
+const dropDownMenu = document.querySelector('.dropdown-menu')
+
+
+toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open')
+    const isOpen = dropDownMenu.classList.contains('open')
+
+    toggleBtnIcon.classList = isOpen 
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+}
+
+var TrandingSlider = new Swiper('.tranding-slider', {
+    effect: 'coverflow',
+    autoplay: {
+      delay: 2000,
+    },
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 450,
+      modifier: 3,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+
+  </script>

@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+/* <<<<navbar section>>>>> */
+
+.nav-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-img img {
+    width: 200px;
+    height: 100px;
+}
+.home-link a {
+    font-size: 2rem;
+    margin-right: 5rem;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    font-weight: bold;
+  }
+
+
+/* <<<<<<< main content >>>>> */
+
+
+.card {
+    cursor: pointer;
+}
+img {
+    height: 23.7rem;
+}
+
+
+/* >>>>>>>>> category>>>>>>> */
+.con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-container {
+    margin: 0 30px;
+    overflow: hidden;
+    height: 350px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+  }
+  .card .image-box {
+    height: 200px;
+  }
+  .card .image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  .card .profile-details {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 15px;
+  }
+  .card .profile-details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  .profile-details .name {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .profile-details .job {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+  }
+.swiper-navBtn {
+    color: #000;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after {
+    font-size: 18px;
+  }
+  .swiper-pagination-bullet {
+    background-color: #000;
+  }
+  @media screen and (max-width: 768px) {
+    .swiper-navBtn {
+      display: none;
+    }
+  }
+
+
+  .text-bold {
+    font-weight: bold;
+    color: rgb(195, 173, 50);
+  }

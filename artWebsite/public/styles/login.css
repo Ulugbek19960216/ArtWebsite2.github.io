@@ -1,0 +1,119 @@
+body, html {
+    height: 100%;
+  }
+  .bg-image{
+    background-image: url("/images/img-bg2.jpg");
+    box-sizing: "border-box";
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100%;
+  
+  }
+  :root{
+    --primary-color:black;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --font-size: 16px;
+  }
+  
+  
+  
+  input[type="email"], input[type="password"], input[type="fname"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: var(--font-size);
+  }
+  
+  
+  button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: var(--font-size);
+  }
+  
+  p {
+    margin-top: 20px;
+    font-size: var(--font-size);
+  }
+  
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+  }
+  
+  .wrapper {
+    max-width: 400px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  img {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 24px;
+  }
+  
+  input[type="email"], input[type="password"], input[type="fname"] {
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  
+  
+  button {
+    &:hover {
+      color: red;
+    }
+  }
+  
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .sign-up-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .sign-up-link {
+    &:hover {
+    color: red;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      max-width: 300px;
+    }
+  }

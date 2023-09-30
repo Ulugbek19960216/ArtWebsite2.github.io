@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/categories.css">
+     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- <<<navbar>>> -->
+    <div class="nav">
+        <div class="nav-wrapper">
+            <div class="nav-img">
+                <img src="/images/WebLogo.PNG">
+            </div>
+            <div class="home-link">
+                <a href="/">Home</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <<<<main content>>>>> -->
+
+        <div class="container">
+            <h1 class="text-center">Galleries</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-5 py-5 text-center">
+                <% categoryData.forEach(category => { %>
+                <div class="col " >
+                    <div class="card gall-1 " >
+                      <a href="/items/<%=category._id%>"> 
+                        <img src="<%= category.imageUrl %>" class="card-img-top " alt="..." >
+                      </a>
+                      <div class="card-body">
+                        <h5 class="card-title "> <%= category.name %></h5>
+                      </div>
+                    </div>
+                  </div>
+                  <% }) %>
+            </div>
+        </div>
+
+        
+        <!-- <<<<<<Category>>>>>> -->
+            <div class="category-title text-center">
+                <h1>Artworks</h1>
+            </div>
+        <div class="con">
+            <div class="container swiper">
+                <div class="slide-container">
+                  <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="/images/art1.jpg" alt="" />
+                      </div>
+                      
+                      <div class="profile-details">
+                        <div class="name-job">
+                          <h3 class="name">
+                            Luiz Carlos Chaves Rocha (Brazilian)</h3>
+                          <h4 class="job">F
+                            Saint George, 2023 
+                                
+                               <span class="text-bold">1,650 USD</span>   <br>
+                                
+                                “Saint George” reminds us to take steps to free 
+                                ourselves from the bonds of self-doubt and
+                                anxiety. 
+
+                            </h4>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="/images/art2.jpg" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <div class="name-job">
+                          <h3 class="name">
+                            Luiz Carlos Chaves Rocha (Brazilian)</h3>
+                          <h4 class="job">F
+                            
+                                Gray Rhino Frenzy
+                                
+                               <span class="text-bold">1,050 USD</span>   <br>
+                                
+                               Your boldness, your strength, your resilience cannot be beaten.
+
+                            </h4>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="/images/art7.jpg" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <div class="name-job">
+                          <h3 class="name">
+                            Luiz Carlos Chaves Rocha (Brazilian)</h3>
+                          <h4 class="job">F
+                            
+                            Yellow Bat Brigade
+                                
+                               <span class="text-bold">2,150 USD</span>   <br>
+                                
+                               “Yellow Bat Brigade” reminds us to have courage and face our fears head on. The Self will not surrender to negative thoughts.
+
+                            </h4>
+                        </div>
+                      </div>
+                    </div> 
+                    
+                     <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="/images/art8.jpg" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <div class="name-job">
+                          <h3 class="name">
+                            
+                        Takashi Murakami (Japanese, born 1962)</h3>
+                          <h4 class="job">F
+                            
+                                A Red River is Visible, 2014
+                                
+                               <span class="text-bold">650 USD</span>   <br>
+                                
+                               The print is stored and will be shipped in its original Kaikai Kiki Gallery box.    
+
+                            </h4>
+                        </div>
+                      </div>
+                    </div> 
+                   <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="/images/art4.jpg" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <div class="name-job">
+                          <h3 class="name">
+                            Luiz Carlos Chaves Rocha (Brazilian)</h3>
+                          <h4 class="job">F
+                            Saint George, 2023 
+                                
+                               <span class="text-bold">1,650 USD</span>   <br>
+                                
+                                “Saint George” reminds us to take steps to free 
+                                ourselves from the bonds of self-doubt and
+                                anxiety. 
+
+                            </h4>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+           
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+              <script>
+                var swiper = new Swiper(".slide-container", {
+                    slidesPerView: 4,
+                     autoplay: {
+                      delay: 2000,
+                    }, 
+                    spaceBetween: 20,
+                    sliderPerGroup: 4,
+                    loop: true,
+                    centerSlide: "true",
+                    fade: "true",
+                    grabCursor: "true",
+                    pagination: {
+                      el: ".swiper-pagination",
+                      clickable: true,
+                      dynamicBullets: true,
+                    },
+                    navigation: {
+                      nextEl: ".swiper-button-next",
+                      prevEl: ".swiper-button-prev",
+                    },
+                    breakpoints: {
+                      0: {
+                        slidesPerView: 1,
+                      },
+                      520: {
+                        slidesPerView: 2,
+                      },
+                      768: {
+                        slidesPerView: 3,
+                      },
+                      1000: {
+                        slidesPerView: 4,
+                      },
+                    },
+                  });
+                
+                  //get category related items 
+                  document.querySelectorAll('.category').forEach(category => {
+                    category.addEventListener('click', () => {
+                      const categoryId = category.getAttribute('data-category-id');
+                  
+                      // Make an AJAX request to fetch products by category ID
+                      fetch(`/items/${categoryId}`)
+                        .then(response => response.json())
+                        .then(products => {
+                          // Handle the retrieved products, e.g., display them on the page
+                          displayProducts(products);
+                        })
+                        .catch(error => {
+                          console.error('Error fetching products:', error);
+                        });
+                    });
+                  });
+
+                  function displayProducts(products) {
+                    // Clear the existing products or category details on the page
+                    // ...
+                  
+                    // Loop through the products and display them
+                    products.forEach(product => {
+                      // Create elements to display the product information
+                      const productElement = document.createElement('div');
+                      productElement.classList.add('product');
+                  
+                      const productImage = document.createElement('img');
+                      productImage.src = product.imageUrl; // Assuming you have an imageUrl field in the Product model
+                      productImage.alt = product.name;
+                  
+                      const productName = document.createElement('h2');
+                      productName.textContent = product.name;
+                  
+                      const productDescription = document.createElement('p');
+                      productDescription.textContent = product.description;
+                  
+                    
+                    });
+                  }
+                  
+              </script>
+        
+</body>
+</html>

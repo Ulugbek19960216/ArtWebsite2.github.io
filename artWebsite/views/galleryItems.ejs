@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="category-title text-center">
+        <h1>Artworks</h1>
+    </div>
+<div class="con">
+    <div class="container swiper">
+        <div class="slide-container">
+          <div class="card-wrapper swiper-wrapper">
+         
+            <% itemsData.forEach(item => { %>
+            <div class="card swiper-slide">
+              <div class="image-box">
+                <% const imageUrlWithoutItems = item.imageUrl.replace('items/', ''); console.log("here" + imageUrlWithoutItems)%> 
+                <img src="<%=imageUrlWithoutItems %> " alt="" />
+              </div>
+              
+              <div class="profile-details">
+                <div class="name-job">
+                  <h3 class="name">
+                  <%=  item.name %> </h3>
+                  <h4 class="job">F
+                    Saint George, 2023 
+                        
+                       <span class="text-bold"> <%=  item.price %> </span>   <br>
+                        
+                       <%=  item.description %> 
+
+                    </h4>
+                </div>
+              </div>
+            </div>
+
+<%        }); %>
+        </div>
+    </div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+</body>
+</html>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".slide-container", {
+        slidesPerView: 4,
+        <!-- autoplay: {
+          delay: 2000,
+        }, -->
+        spaceBetween: 20,
+        sliderPerGroup: 4,
+        loop: true,
+        centerSlide: "true",
+        fade: "true",
+        grabCursor: "true",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          dynamicBullets: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          520: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1000: {
+            slidesPerView: 4,
+          },
+        },
+      });
+   
+
