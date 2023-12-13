@@ -1,7 +1,7 @@
 // Import the Mongoose library
 const mongoose = require("mongoose");
 
-// Connect to the MongoDB database using the specified URL
+// Connect to the MongoDB database using the specified URL "ArtWebsite"
 mongoose
   .connect("mongodb://127.0.0.1:27017/ArtWebsite")
   .then(() => {
@@ -34,5 +34,5 @@ const logInSchema = new mongoose.Schema({
 // Create a Mongoose model based on the schema, and specify the collection name
 const LogInCollection = mongoose.model('LogInCollection', logInSchema);
 
-// Export the Mongoose model so that it can be used in other parts of your application
+// Export the Mongoose model so that it can be used in other parts of your applications
 module.exports = LogInCollection;
