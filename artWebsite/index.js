@@ -8,7 +8,8 @@ const ejs = require('ejs'); // EJS template engine
 const templatePath = path.join(__dirname, "./views");
 
 // Define the port number on which the server will run
-const port = 3000;
+// port changed from 3000 to 4000
+const port = 4000;
 
 // Create an instance of the Express application
 const app = express();
